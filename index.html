@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Piano Practice</title>
+  <meta name="description" content="Plan your weekly piano practice, get reminders, log sessions and see weekly reports.">
+  <meta name="author" content="Mahsa Mousavi">
+  <meta name="theme-color" content="#2f2a4a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Practice">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="title">Today</h1>
+    <button id="lang" class="lang-btn" type="button">فارسی</button>
+  </header>
+
+  <main id="view" aria-live="polite"></main>
+
+  <nav class="tabs" aria-label="Sections">
+    <button data-tab="today" class="active"><span class="ico" aria-hidden="true">●</span><span class="lbl">Today</span></button>
+    <button data-tab="plan"><span class="ico" aria-hidden="true">▦</span><span class="lbl">Plan</span></button>
+    <button data-tab="report"><span class="ico" aria-hidden="true">▮</span><span class="lbl">Report</span></button>
+    <button data-tab="metronome"><span class="ico" aria-hidden="true">♩</span><span class="lbl">Metronome</span></button>
+    <button data-tab="settings"><span class="ico" aria-hidden="true">⚙</span><span class="lbl">Settings</span></button>
+  </nav>
+
+  <dialog id="modal"><form method="dialog" id="modal-body"></form></dialog>
+  <div id="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
